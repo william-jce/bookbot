@@ -9,7 +9,7 @@ def main():
     
     for item in sorted_letters:
         if item[0].isalpha():
-            print(f"The '{item[0]} character was found {item[1]} times.")
+            print(f"The '{item[0]}' character was found {item[1]} times.")
 
     print("--- End report ---")
 

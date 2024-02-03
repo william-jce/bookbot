@@ -8,9 +8,8 @@ def main():
     print(f"{get_word_count(text)} words found in the book.")
     
     for item in sorted_letters:
-        if not item["char"].isalpha():
-            continue
-        print(f"The '{item['char']} character was found {item['num']} times.")
+        if item["char"].isalpha():
+            print(f"The '{item['char']} character was found {item['num']} times.")
 
     print("--- End report ---")
 

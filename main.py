@@ -25,10 +25,6 @@ def get_word_count(text):
     return len(words)
 
 
-def sort_on(d):
-    return d["num"]
-
-
 def get_char_count(text):
     chars = {}
     for t in text:
@@ -44,8 +40,8 @@ def get_sorted_letters(chars):
     letters = []
     for char in chars:
         letters.append({"char": char, "num": chars[char]})
-    letters.sort(reverse=True, key=sort_on)
-    return letters
+    sorted_letters = sorted(letters, reverse=True, key=lambda sort: sort["num"])
+    return sorted_letters
 
 
 main()

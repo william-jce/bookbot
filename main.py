@@ -8,8 +8,8 @@ def main():
     print(f"{get_word_count(text)} words found in the book.")
     
     for item in sorted_letters:
-        if item["char"].isalpha():
-            print(f"The '{item['char']} character was found {item['num']} times.")
+        if item[0].isalpha():
+            print(f"The '{item[0]} character was found {item[1]} times.")
 
     print("--- End report ---")
 
@@ -36,10 +36,7 @@ def get_char_count(text):
 
 
 def get_sorted_letters(chars):
-    letters = []
-    for char in chars:
-        letters.append({"char": char, "num": chars[char]})
-    sorted_letters = sorted(letters, reverse=True, key=lambda sort: sort["num"])
+    sorted_letters = sorted(chars.items(), reverse=True, key=lambda sort: sort[1])
     return sorted_letters
 
 

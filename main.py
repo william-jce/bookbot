@@ -7,8 +7,6 @@ def main():
   if len(sys.argv) != 2:
     print(f"Usage: python3 main.py <path_to_book>")
     sys.exit(1)
-  #book_text = get_book_text(sys.argv[1])
-  #book_char = num_char(book_text)
   print("============ BOOKBOT ============")
   print(f"Analyzing book found at {sys.argv[1]}")
   print("----------- Word Count ----------")

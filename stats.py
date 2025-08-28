@@ -1,7 +1,7 @@
-def num_words(book_text):
+def get_num_words(book_text):
   return len(book_text.split())
 
-def num_char(book_text):
+def get_num_char(book_text):
   char_count = {}
   lowercase = book_text.lower()
   for char in lowercase:

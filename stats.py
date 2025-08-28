@@ -1,0 +1,11 @@
+def num_words(book_text):
+  return len(book_text.split())
+
+def num_char(book_text):
+  char_count = {}
+  lowercase = book_text.lower()
+  for char in lowercase:
+    if char not in char_count:
+      char_count[char] = 0
+    char_count[char] += 1
+  return char_count
